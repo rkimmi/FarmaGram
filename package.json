@@ -8,7 +8,6 @@
     "knex": "knex",
     "start": "node index",
     "dev": "nodemon index"
-
   },
   "repository": {
     "type": "git",
@@ -26,7 +25,8 @@
     "express-handlebars": "^3.0.0",
     "knex": "^0.14.2",
     "sqlite3": "^3.1.13"
-},
-    "devDependencies": {
-      "nodemon": "^1.14.11"  }
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
 }
