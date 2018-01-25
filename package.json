@@ -1,0 +1,32 @@
+{
+  "name": "farmagram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "knex": "knex",
+    "start": "node index",
+    "dev": "nodemon index"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rkimmi/FarmaGram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rkimmi/FarmaGram/issues"
+  },
+  "homepage": "https://github.com/rkimmi/FarmaGram#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "knex": "^0.14.2",
+    "sqlite3": "^3.1.13"
+},
+    "devDependencies": {
+      "nodemon": "^1.14.11"  }
+}
