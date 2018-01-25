@@ -23,7 +23,7 @@ function getImagesOfProfile (userId, testDb) {
   const conn = testDb || db
   return conn('images')
     .join('users', 'users.id', 'images.user_id')
-    .where('users.id', 'images.user_id')
+    .where('users.id', userId)
     .select('images.id as imgId', 'images.title as title', 'images.url as url')
 }
 
