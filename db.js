@@ -1,8 +1,14 @@
-const env = process.env.NODE_ENV || 'development'
+const config = require('./knexfile').development
+const knex = require('knex')
 
-const config = require('./knexfile')[env]
+const db = knex(config)
 
-const knex = require('knex')(config)
+function displayHome (testDb) {
+  const conn = testDb || db
+  return conn('users')
+    .join('images', 'images.user_id', 'users.id')
+    .select('users.id', 'users.name', 'images.url')
+}
 
 function getUserProfile (userId) {
   return knex('profiles')
@@ -21,5 +27,6 @@ function getImagesOfProfile (userId) {
 
 module.exports = {
   getUserProfile,
-  getImagesOfProfile
+  getImagesOfProfile,
+  displayHome
 }
