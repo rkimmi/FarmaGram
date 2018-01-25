@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+.header {
+
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.imageBox {
+  display: flex;
+  flex-direction: column;
+  max-width: 100px;
+  max-height: 110px;
+}
+
+.user {
+  max-width: 100px;
+  max-height: 10px;
+}
+
+.userImage {
+ width: 100px;
+ height: 100px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
