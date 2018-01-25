@@ -1,7 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/styles/home.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../images/icons/favicon.ico" type="images/x-icon">
+  <title>FarmaGram</title>
+</head>
 <body>
-  <ul>
+  <div class="profileContent">
     <div class="user-name">
       {{userName}}
+    </div>
+      <div >
+      <img class="img-circle" src='{{profileImg}}'>
     </div>
     <div class="animal-name">
       {{animalName}}
@@ -9,13 +24,22 @@
     <div class="bio">
       {{bio}}
     </div>
-    <div class="profile-image">
-      <img width="70" height="70" src='{{profileImg}}'>
-    </div>
-  </ul>
-  {{#each images}}
-  <div>
-    <img src='{{url}}'>
   </div>
+
+
+
+  <div class="main">
+  {{#each images}}
+    <div class='imageBox'>
+      <div class='userImage'>
+        <img src='{{url}}'>
+      </div>
+    </div>
   {{/each}}
+  </div>
+
+
+
+
 </body>
+</html>

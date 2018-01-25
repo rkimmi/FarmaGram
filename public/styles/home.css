@@ -33,6 +33,8 @@ body {
   margin: 3px;
 }
 
+
+
 .user {
   align-content: center;
   max-width: 400px;
@@ -47,4 +49,16 @@ body {
 img {
   width: 400px;
   height: 400px;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+}
+
+.img-circle {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 70px;
+  height: 70px;
 }
