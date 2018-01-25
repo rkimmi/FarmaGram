@@ -13,12 +13,12 @@
     </div>
     <div class = 'main'>
       {{#each data}}
-        <div class = 'imageBox' onclick="location.href='/profile/{{data.id}}'">
+        <div class = 'imageBox' onclick="location.href='/profile/{{id}}'">
           <div class = 'user'>
-              <p>{{data.name}}</p>
+              <p>{{name}}</p>
           </div>
           <div class = 'userImage'>
-              <img src= '{{data.url}}'>
+              <img src= '{{url}}'>
           </div>
         </div>
       {{/each}}
