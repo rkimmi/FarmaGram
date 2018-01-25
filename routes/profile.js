@@ -13,6 +13,7 @@ router.get('/:id', (req, res) => {
     profileId: null,
     bio: null,
     email: null,
+    profileImg: null,
     images: []
   }
   db.getUserProfile(userId)
@@ -24,6 +25,7 @@ router.get('/:id', (req, res) => {
       dataObj.profileId = profile.profileId
       dataObj.bio = profile.bio
       dataObj.email = profile.email
+      dataObj.profileImg = profile.profileImg
       db.getImagesOfProfile(userId)
         .then(images => {
           console.log(images)
