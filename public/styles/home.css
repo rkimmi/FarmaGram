@@ -5,7 +5,12 @@
   flex-direction: column;
 }
 .header {
+  color: #E82C0C;
+  font-size: 25px;
+}
 
+h1 {
+  text-align: center;
 }
 
 .main {
@@ -16,24 +21,30 @@
   flex-wrap: wrap;
 }
 
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
 .imageBox {
   display: flex;
   flex-direction: column;
-  max-width: 100px;
-  max-height: 110px;
+  max-width: 400px;
+  max-height: 440px;
+  margin: 3px;
 }
 
 .user {
-  max-width: 100px;
-  max-height: 10px;
+  align-content: center;
+  max-width: 400px;
+  max-height: 40px;
 }
 
 .userImage {
- width: 100px;
- height: 100px;
+ width: 400px;
+ height: 400px;
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  width: 400px;
+  height: 400px;
 }
