@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/styles/home.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../images/icons/favicon.ico" type="images/x-icon">
   <title>FarmaGram</title>
 </head>
 <body>
@@ -13,9 +17,9 @@
     </div>
     <div class = 'main'>
       {{#each data}}
-        <div class = 'imageBox' onclick="location.href='/profile/{{id}}'">
-          <div class = 'user'>
-              <p>{{name}}</p>
+        <div class = 'imageBox'>
+          <div class = 'user' onclick="location.href='/profile/{{id}}'">
+              <p><strong>{{user_name}}</strong></p>
           </div>
           <div class = 'userImage'>
               <img src= '{{url}}'>
