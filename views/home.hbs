@@ -23,8 +23,8 @@
     </div>
     <div class = 'main'>
       {{#each data}}
-        <div class = 'imageBox'>
-          <div class = 'user' onclick="location.href='/profile/{{id}}'">
+        <div class = 'imageBox' onclick="location.href='/profile/{{id}}'">
+          <div class = 'user'>
               <p><strong>{{user_name}}</strong></p>
           </div>
           <div class = 'userImage'>
