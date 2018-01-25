@@ -142,7 +142,7 @@ exports.seed = function (knex, Promise) {
           title: 'Lil theif',
           url: '/images/pig/pigs5.jpg',
           user_id: 1
-        },ac libero nec ligula consectetuer rhoncus. Nullam velit dui, semper
+        },
         {
           id: 24,
           title: 'From that Famous Movie',

@@ -22,4 +22,6 @@ server.use('/', rootRoutes)
 
 server.use('/home', homeRoutes)
 
+server.use('/profile', profileRoutes)
+
 module.exports = server
