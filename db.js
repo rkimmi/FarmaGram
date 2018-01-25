@@ -16,7 +16,7 @@ function getUserProfile (userId, testDb) {
     .join('users', 'users.id', 'profiles.user_id')
     .where('users.id', userId)
     .select('users.id as userId', 'users.user_name as userName', 'users.name as animalName',
-      'profiles.id as profileId', 'profiles.bio as bio', 'profiles.email as email')
+      'profiles.id as profileId', 'profiles.bio as bio', 'profiles.email as email', 'profiles.profile_img as profileImg')
 }
 
 function getImagesOfProfile (userId, testDb) {

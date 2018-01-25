@@ -1,14 +1,17 @@
 <body>
   <ul>
-    <li>
+    <div class="user-name">
       {{userName}}
-    </li>
-    <li>
+    </div>
+    <div class="animal-name">
       {{animalName}}
-    </li>
-    <li>
+    </div>
+    <div class="bio">
       {{bio}}
-    </li>
+    </div>
+    <div class="profile-image">
+      <img width="70" height="70" src='{{profileImg}}'>
+    </div>
   </ul>
   {{#each images}}
   <div>
