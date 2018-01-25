@@ -10,18 +10,20 @@ function displayHome (testDb) {
     .select('users.id', 'users.name', 'images.url')
 }
 
-function getUserProfile (userId) {
-  return knex('profiles')
+function getUserProfile (userId, testDb) {
+  const conn = testDb || db
+  return conn('profiles')
     .join('users', 'users.id', 'profiles.user_id')
     .where('users.id', userId)
-    .select('users.id as userId', 'users.name as userName', 'users.name as animalName',
+    .select('users.id as userId', 'users.user_name as userName', 'users.name as animalName',
       'profiles.id as profileId', 'profiles.bio as bio', 'profiles.email as email')
 }
 
-function getImagesOfProfile (userId) {
-  return knex('images')
+function getImagesOfProfile (userId, testDb) {
+  const conn = testDb || db
+  return conn('images')
     .join('users', 'users.id', 'images.user_id')
-    .where('users.id', 'images.user_id')
+    .where('users.id', userId)
     .select('images.id as imgId', 'images.title as title', 'images.url as url')
 }
 

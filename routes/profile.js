@@ -17,16 +17,20 @@ router.get('/:id', (req, res) => {
   }
   db.getUserProfile(userId)
     .then(profiles => {
-      dataObj.userId = profiles[0].userId
-      dataObj.userName = profiles[0].userName
-      dataObj.animalName = profiles[0].animalName
-      dataObj.profileId = profiles[0].profileId
-      dataObj.bio = profiles[0].bio
-      dataObj.email = profiles[0].email
+      const profile = profiles[0]
+      dataObj.userId = profile.userId
+      dataObj.userName = profile.userName
+      dataObj.animalName = profile.animalName
+      dataObj.profileId = profile.profileId
+      dataObj.bio = profile.bio
+      dataObj.email = profile.email
       db.getImagesOfProfile(userId)
         .then(images => {
+          console.log(images)
           dataObj.images = images
           res.render('profile', dataObj)
         })
     })
 })
+
+module.exports = router
