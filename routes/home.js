@@ -8,7 +8,6 @@ module.exports = router
 router.get('/', (req, res) => {
   db.displayHome()
     .then(data => {
-      console.log(data)
       res.render('home', {data: data})
     })
     .catch(err => {
