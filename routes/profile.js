@@ -34,4 +34,12 @@ router.get('/:id', (req, res) => {
     })
 })
 
+router.post('/add', (req, res) => {
+  console.log(req.body)
+  db.addPicture(req.body)
+    .then(() => {
+      res.redirect(req.body.id)
+    })
+})
+
 module.exports = router
