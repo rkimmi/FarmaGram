@@ -38,9 +38,19 @@ function addPicture (input, testDb) {
     })
 }
 
+function displayImage (input, testDb) {
+  const conn = testDb || db
+  return conn('users')
+    .join('images', 'images.user_id', 'users.id')
+    .join('profiles', 'profiles.user_id', 'users.id')
+    .where('images.id', input)
+    .select('profiles.profile_img as profileImage', 'users.user_name as userName', 'images.url as url', 'images.title as title')
+}
+
 module.exports = {
   getUserProfile,
   getImagesOfProfile,
   displayHome,
-  addPicture
+  addPicture,
+  displayImage
 }
