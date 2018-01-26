@@ -49,10 +49,6 @@
         {{bio}}
       </div>
     </div>
-   
-    
-
-
 
   <div class="main">
   {{#each images}}
@@ -64,7 +60,19 @@
   {{/each}}
   </div>
 
-
+<div class="addImage">
+  <h4> Hiya {{userName}}! Add a new pic below!</h4>
+  <form action="/profile/add" method="post">
+  <label> Image Url: 
+    <input type="hidden" name="id" value="{{userId}}">
+    <input type="text" name="url">
+  </label>
+  <label> Caption:
+    <input type="text" name="title">
+  </label>
+  <button type="submit">Submit</button>
+  </form>
+</div>
 
 
 </body>
