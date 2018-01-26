@@ -13,31 +13,32 @@
 <body>
   <div class="profile-container">
 
-    <div class="user-name">
-      {{userName}}
-    </div>
+    <div class="top-bar">
+      <div class="user-name">
+        {{userName}}
+      </div>
+      <div class="home-link">
+        {{!-- </div>/a href="/">Home</a> --}}
+          <input type="button" value="Home" onclick="window.location.href='/'" />
+      
 
+      </div>
+    </div>
       <div class="social-block">
         <div>
             <img class="img-circle" src='{{profileImg}}'>
         </div>
         <div class="following-data">
         <div class="posts">
-          {{!-- <div> --}}
             14 posts
-          {{!-- </div> --}}
         </div>
 
         <div class="followers">
-          {{!-- <div> --}}
             150,000 followers
-          {{!-- </div> --}}
         </div>
 
         <div class="following">
-          {{!-- <div> --}}
             5 following
-          {{!-- </div> --}}
         </div>
         </div>
 
