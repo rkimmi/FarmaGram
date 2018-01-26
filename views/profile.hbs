@@ -11,20 +11,46 @@
   <title>FarmaGram</title>
 </head>
 <body>
-  <div class="profileContent">
+  <div class="profile-container">
+
     <div class="user-name">
       {{userName}}
     </div>
-      <div >
-      <img class="img-circle" src='{{profileImg}}'>
+
+      <div class="social-block">
+        <div>
+            <img class="img-circle" src='{{profileImg}}'>
+        </div>
+        <div class="following-data">
+        <div class="posts">
+          {{!-- <div> --}}
+            14 posts
+          {{!-- </div> --}}
+        </div>
+
+        <div class="followers">
+          {{!-- <div> --}}
+            150,000 followers
+          {{!-- </div> --}}
+        </div>
+
+        <div class="following">
+          {{!-- <div> --}}
+            5 following
+          {{!-- </div> --}}
+        </div>
+        </div>
+
+      </div>
+      <div class="animal-name">
+        {{animalName}}
+      </div>
+      <div class="bio">
+        {{bio}}
+      </div>
     </div>
-    <div class="animal-name">
-      {{animalName}}
-    </div>
-    <div class="bio">
-      {{bio}}
-    </div>
-  </div>
+   
+    
 
 
 
