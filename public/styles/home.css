@@ -49,6 +49,8 @@ body {
   margin: 3px;
 }
 
+
+
 .user {
   
   max-width: 400px;
@@ -67,10 +69,70 @@ body {
   align-self: center;
   padding-right: 10px;
 }
+
 img {
   width: 400px;
   height: 400px;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+}
+
+.img-circle {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 70px;
+  height: 70px;
   overflow: hidden;
   flex-shrink:0;
     -webkit-flex-shrink: 0;
+}
+
+.social-block {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px;
+  flex-direction: row;
+  width: 90%;
+}
+
+
+.user-name {
+  margin: 10px 50px;
+}
+
+
+.animal-name {
+  margin: 0 50px;
+}
+
+.bio {
+  margin: 10px 50px;
+}
+
+.posts {
+  display: inline-block;
+}
+
+.followers {
+  display: inline-block;
+}
+
+.following {
+  display: inline-block;
+}
+
+.following-data {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

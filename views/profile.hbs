@@ -1,21 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/styles/home.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../images/icons/favicon.ico" type="images/x-icon">
+  <title>FarmaGram</title>
+</head>
 <body>
-  <ul>
+  <div class="profile-container">
+
     <div class="user-name">
       {{userName}}
     </div>
-    <div class="animal-name">
-      {{animalName}}
+
+      <div class="social-block">
+        <div>
+            <img class="img-circle" src='{{profileImg}}'>
+        </div>
+        <div class="following-data">
+        <div class="posts">
+          {{!-- <div> --}}
+            14 posts
+          {{!-- </div> --}}
+        </div>
+
+        <div class="followers">
+          {{!-- <div> --}}
+            150,000 followers
+          {{!-- </div> --}}
+        </div>
+
+        <div class="following">
+          {{!-- <div> --}}
+            5 following
+          {{!-- </div> --}}
+        </div>
+        </div>
+
+      </div>
+      <div class="animal-name">
+        {{animalName}}
+      </div>
+      <div class="bio">
+        {{bio}}
+      </div>
     </div>
-    <div class="bio">
-      {{bio}}
-    </div>
-    <div class="profile-image">
-      <img width="70" height="70" src='{{profileImg}}'>
-    </div>
-  </ul>
+   
+    
+
+
+
+  <div class="main">
   {{#each images}}
-  <div>
-    <img src='{{url}}'>
-  </div>
+    <div class='imageBox'>
+      <div class='userImage'>
+        <img src='{{url}}'>
+      </div>
+    </div>
   {{/each}}
+  </div>
+
+
+
+
 </body>
+</html>
