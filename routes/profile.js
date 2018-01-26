@@ -28,7 +28,6 @@ router.get('/:id', (req, res) => {
       dataObj.profileImg = profile.profileImg
       db.getImagesOfProfile(userId)
         .then(images => {
-          console.log(images)
           dataObj.images = images
           res.render('profile', dataObj)
         })
