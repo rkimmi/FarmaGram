@@ -27,8 +27,20 @@ function getImagesOfProfile (userId, testDb) {
     .select('images.id as imgId', 'images.title as title', 'images.url as url')
 }
 
+function addPicture (input, testDb) {
+  const conn = testDb || db
+  console.log(input)
+  return conn('images')
+    .insert({
+      title: input.title,
+      url: input.url,
+      user_id: input.id
+    })
+}
+
 module.exports = {
   getUserProfile,
   getImagesOfProfile,
-  displayHome
+  displayHome,
+  addPicture
 }

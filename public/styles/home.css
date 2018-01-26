@@ -86,8 +86,6 @@ img {
   width: 70px;
   height: 70px;
   overflow: hidden;
-  flex-shrink:0;
-    -webkit-flex-shrink: 0;
 }
 
 .social-block {
